@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  /* General styles for all pages */
+body {
+  font-family: Garamond, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d6ccf0;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #9fccc6;
+  color: white;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.nav-bar li {
+  margin: 30px;
+  font-size: 20px;
+  }
+
+.nav-bar a {
+  font-family: Lucida Console, monospace;
+  text-decoration: none;
+  color: white;
+}
+
+/* Home Page styles */
+.home {
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 50px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.explore-btn {
+  background-color: #22223b;
+  color: white;
+  padding: 10px 30px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 200px;
+}
+
+.description {
+  margin: 50px auto;
+  width: 60%;
+  font-size: 1.2em;
+}
+  
+/* Links */
+  a:link {
+  color: #c1e3de;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #342166;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6a42d4;
+  background-color: transparent;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+  </style>
+  
+<!-- Content -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Logo that links back to the homepage -->
+  <header>
+    <a href="https://dreamingofyuu.github.io/fan_yukie_a3/">
+      <img src="Y.png" alt="Gamiverse Logo" class="logo">
+    </a>
+    
+    <!-- Navigation bar -->
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3/">Home</a></li>
+        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage/">Games</a></li>
+        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_aboutme">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Page -->
+  <main class="home">
+    <h1>Welcome to my Gamingverse</h1>
+    <!-- Button links to the Games section on the same page -->
+    <button class="explore-btn" onclick="location.href='https://dreamingofyuu.github.io/fan_yukie_a3_gamespage/'">Explore Games</button>
+    <p class="description">
+      Here are my top games of 2024, kind of like a Spotify Wrapped but for all the games I've played this year! I've added my personal ratings, reasons why I gave the game that rating, experiences, and aspects that I liked and didn't like.
+    </p>
+  </main>
+</body>
+</html>
