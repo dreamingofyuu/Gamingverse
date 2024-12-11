@@ -52,7 +52,9 @@ header {
 .games h1 {
   font-family: Lucida Console, monospace;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 50px
 }
   
 .games h2 {
@@ -64,7 +66,6 @@ header {
 .games h3 {
     font-family: Lucida Console, monospace;
     text-align: center;
-    margin-bottom: 30px;
   }
 
 
@@ -72,13 +73,14 @@ header {
 .game img {
   width: auto;
   height: auto;
+  margin-bottom: 30px
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 40%;
 }
 
 .game p {
@@ -86,41 +88,58 @@ header {
 }
   
 /*Discover more*/
-  .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+  gap: 20px; /* Space between grid items */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.column {
-  flex: 25%;
-  max-width: 50%;
-  padding: 0 4px;
+/* Individual icon card styling */
+.icon-card {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: center;
-  width: 75%;
-  height: auto;
+.icon-card img {
+  width: 200px; /* Icon size */
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.icon-card p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Hover effect for cards */
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Top banner */
-.container {
+#container {
+  background-color: #fcc8c8;
+  opacity: 0.7;
   position: relative;
   text-align: center;
-  border: 10px solid #bc3126;
-  color: white;
 }
-  
-.container img {
-  opacity: 0.8;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
+
+#container img {
+  width: 100%;
+}
+
   
 .bg-text {
   color: white;
@@ -134,16 +153,85 @@ header {
   text-align: center;
 }
   
-.bg-text h1 {
+#container h1 {
+  font-size: 75px;
+  border: 5px solid #f36864;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #54170c;
+  padding: 20px 40px;
+}
+  
+/* Text boxes */
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section with text and image */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Left text column */
+.text-left {
+  flex: 1;
+}
+
+.text-left h2 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-left h3 {
+    font-size: 2em;
     font-family: Lucida Console, monospace;
-    font-size: 40px;
-    background-color: rgba(0,0,0, 0.6);
-    border: 5px solid #f17051;
-     padding: 20px;
+    text-align: center;
+    margin-top: 10px;
   }
-  
+
+
+.text-left p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  margin-top: 30px;
+}
+
+/* Right image column */
+.image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-right img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom text styling */
+.bottom-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+}
   </style>
-  
+
+
+
+
+
 <!-- Content -->
 <head>
   <meta charset="UTF-8">
@@ -162,16 +250,15 @@ header {
     <!-- Navigation bar -->
     <nav>
       <ul class="nav-bar">
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3/">Home</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage/">Games</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_aboutme">About Me</a></li>
-      </ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        </ul>
     </nav>
   </header>
   
    <!-- Top banner -->
-    <div class="container">
-    <img src="Love-and-Deepspace-Where-Drakeshadows-Fall-1024x576.webp" alt="Infold Banner" style="width:100%;">
+    <div id="container">
+    <img src="Love-and-Deepspace-Where-Drakeshadows-Fall-1024x576.jpg" alt="Infold Banner" style=width:100%;>
     <div class="bg-text"><h1>
       InFold Pte. Ltd. Games</h1></div>
   </div>
@@ -180,39 +267,49 @@ header {
   <main class="games">
   
   <!-- Love and Deepspace -->
-    <section id="Love and Deepspace" class="games">
-      <h3>︵‿︵‿୨♡୧‿︵‿︵</h3>
-      <h2>Love and Deepspace</h2>
-      <h3>︶꒦꒷♡꒷꒦︶</h3>
-      <img src="98aa5accec75bf256508d2599d449772.jpeg" alt="Love and Deepspace" class="center">
+  <div class="layout-container">
+    <div class="top-section">
+      <div class="text-left">
+        <h3>︵‿︵‿୨♡୧‿︵‿︵</h3>
+        <h2>Love and Deepspace</h2>
+        <h3>︶꒦꒷♡꒷꒦︶</h3>
+      <hr>
       <p>Platform Played on: Mobile</p>
       <p>Number of Months played: 11</p>
       <p>Money spent: ~$80</p>
       <p>Favourite Character: Sylus</p>
       <p>Favourite Event: Where Drakeshadows Fall</p>
       <p>Rating: 9.9/10</p>
+      </div>
+      <div class="image-right">
+        <img src="98aa5accec75bf256508d2599d449772.jpeg" alt="Love and Deepspace">
+      </div>
+    </div>
+    <div class="bottom-text">
       <p>Reason: Love and Deepspace is the game I currently play everyday. I first saw their ad on Instagram and immediately wanted to play. Their game is an Otome game, a dating simulator based on a female protagonist, and their concept was really unique to me. Albeit their plot gets a little confusing, their graphics are stunning, the events are easy to follow, and the characters are very attractive. Not just one or two that are clearly biased, but the company creates their characters to be equally attractive with their fair share of limited event cards. Different from most visual novels, this game incoporates battle sequences to allow it to truly feel like a game rather than just a boring grind for character affection.</p>
-    </section>
+      </div>
+  </div>
   <hr>
+
   <!-- Other companies -->
   <h1>Discover Other Games</h1>
-    <div class="row">
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_riot_games/">
-  <img src="download.png" alt="Riot Games" width="auto" height="300">
-  </a></p>
-  <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_mojang/">
-  <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft" width="auto" height="300">
-  </a></p>
+  <div class="icon-grid">
+    <a href="riot.html" class="icon-card">
+      <img src="download.png" alt="Riot Games">
+      <p>Riot Games</p>
+    </a>
+    <a href="mojang.html" class="icon-card">
+      <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft">
+      <p>Mojang (Microsoft)</p>
+    </a>
+    <a href="sims.html" class="icon-card">
+      <img src="Electronic-Arts-Logo.svg.png" alt="EA Sports">
+      <p>EA Sports</p>
+    </a>
+    <a href="hoyoverse.html" class="icon-card">
+      <img src="ef6ae97143bb4b4fb023ddd6341d5823.png" alt="Hoyoverse Games">
+      <p>HoYoverse</p>
+    </a>
   </div>
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_EA_sports/">
-  <img src="Electronic-Arts-Logo.svg.png" alt="EA Sports" width="auto" height="300">
-  </a></p>
-  <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_hoyoverse_games/">
-  <img src="ef6ae97143bb4b4fb023ddd6341d5823.png" alt="Hoyoverse Games" width="auto" height="300"></a></p>
-    </div>
-  </div>
-  </main>
 </body>
 </html>

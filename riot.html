@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-  /* General styles for all pages */
+    /* General styles for all pages */
 body {
   font-family: Courier, monospace;
   margin: 0;
@@ -40,8 +40,8 @@ header {
   text-decoration: none;
   color: white;
 }
-  
-  a:hover {
+
+.nav-bar a:hover {
     color: #a10e1a;
   }
   
@@ -53,7 +53,9 @@ header {
 .games h1 {
   font-family: Lucida Console, monospace;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 50px
 }
   
 .games h2 {
@@ -62,71 +64,88 @@ header {
   margin-bottom: 30px;
 }
   
-.games h3 {
+  .games h3 {
     font-family: Lucida Console, monospace;
     text-align: center;
-    margin-bottom: 30px;
   }
 
-/* Img settings*/
+/* Img settings */
 .game img {
   width: 100px;
   height: auto;
+  margin-bottom: 30px
 }
   
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  width: 40%;
 }
-  
+
 .game p {
   margin: 100px;
 }
-  
+
 /*Discover more*/
-  .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+  gap: 20px; /* Space between grid items */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.column {
-  flex: 25%;
-  max-width: 50%;
-  padding: 0 4px;
+/* Individual icon card styling */
+.icon-card {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: center;
-  width: 75%;
-  height: auto;
+.icon-card img {
+  width: 200px; /* Icon size */
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.icon-card p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Hover effect for cards */
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Top banner */
-.container {
+#container {
+  background-color: #adc8de;
+  opacity: 0.7;
   position: relative;
   text-align: center;
-  border: 10px solid #001e30;
-  color: white;
 }
-  
-.container img {
-  opacity: 0.8;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
+
+#container img {
+  width: 100%;
+}
+
   
 .bg-text {
   color: white;
   font-weight: bold;
   position: absolute;
-  top: 48%;
+  top: 45%;
   left: 50%; 
   height: 20%;
   width: 80%;
@@ -134,15 +153,84 @@ header {
   text-align: center;
 }
   
-.bg-text h1 {
-  font-family: Lucida Console, monospace;
-  font-size: 40px;
-  background-color: rgba(0,0,0, 0.6);
-  border: 5px solid #15dde6;
-  padding: 20px;
+#container h1 {
+  font-size: 75px;
+  border: 5px solid #8BE1F0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #312f6f;
+  padding: 20px 40px;
+}
+  
+/* Text boxes */
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section with text and image */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Left text column */
+.text-left {
+  flex: 1;
+}
+
+.text-left h2 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-left h3 {
+    font-size: 2em;
+    font-family: Lucida Console, monospace;
+    text-align: center;
+    margin-top: 10px;
   }
+
+
+.text-left p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  margin-top: 30px;
+}
+
+/* Right image column */
+.image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-right img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom text styling */
+.bottom-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+}
   </style>
   
+
+
+
 <!-- Content -->
 <head>
   <meta charset="UTF-8">
@@ -161,16 +249,15 @@ header {
     <!-- Navigation bar -->
     <nav>
       <ul class="nav-bar">
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3/">Home</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage/">Games</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_aboutme">About Me</a></li>
-      </ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        </ul>
     </nav>
   </header>
 
    <!-- Top banner -->
-    <div class="container">
-    <img src="thumb-1920-1090797.jpg" alt="Riot Games Banner" style="width:100%;">
+    <div id="container">
+    <img src="thumb-1920-1090797.jpg" alt="Riot Games" style="width:100%;">
     <div class="bg-text"><h1>
       Riot Games</h1></div>
   </div>
@@ -179,55 +266,74 @@ header {
   <main class="games">
     
   <!-- Valorant -->
-    <section id="Valorant" class="games">
-      <h3>◤──•~❉᯽❉~•──◥</h3>
-      <h2>Valorant</h2>
-      <h3>◣──•~❉᯽❉~•──◢</h3>
-      <img src="1706273134valorant-icon-png.png" alt="Valorant" class="center">
+  <div class="layout-container">
+    <div class="top-section">
+      <div class="text-left">
+        <h3>◤──•~❉᯽❉~•──◥</h3>
+        <h2>Valorant</h2>
+        <h3>◣──•~❉᯽❉~•──◢</h3>
+      <hr>
       <p>Platform Played on: PC</p>
       <p>Number of Months played: 8</p>
       <p>Money spent: $80</p>
       <p>Most Played Character: Killjoy</p>
       <p>Most Played Gamemode: Competitive</p>
       <p>Rating: 8.5/10</p>
-      <p>Reason: Valorant may be one of two games that I have a love-hate relationship with. Sometimes, my matches can go really well and I do amazing, other days I can go 0/10/2 (K/D/A). However, like many multiplayer games, I mainly play with my friens. They make those 10 loss streaks bareable and fun. Gameplay wise, Valorant is fun and unique with all its agents and their many abilities. With map glitches or lineups, a player has unlimited possibilities to win their match. There are many gamemodes that the game has to offer; if you get tired of normal gun shooting, you can switch to a rotating-weapons mode. Graphics wise, it's not bad, but there can be some improvements. Overall, Valorant isn't half bad when I'm winning with friends.</p>
-    </section>
-    <hr>
-    <!-- League of Legends -->
-    <section id="League of Legends" class="games">
-      <h3>︻⋆︻⋆︻⋆︻⋆︻</h3>
-      <h2>League of Legends</h2>
-      <h3>︼⋆︼⋆︼⋆︼⋆︼</h3>
-      <img src="600px-League_of_Legends_Icon.png" alt="League of Legends" class="center">
-      <p>Platform Played on: PC/Mobile (TFT)</p>
-      <p>Number of Months played: 12</p>
-      <p>Money spent: $0</p>
-      <p>Most Played Character: Ahri</p>
-      <p>Most Played Gamemode: Summoner's Rift: Normal</p>
-      <p>Rating: 7/10</p>
-      <p>Reason: League is not any better than Valorant, but I have significantly more play time on it due to my laptop's inability to run Valorant. Filled with toxic players, I often find myself being annoyed at their players and have to take breaks from playing the game. That's why I try to play with my friends rather than strangers. Graphics wise, the in-game graphics are as good as they get with a MOBA game, but their splash art is really nice. Each character comes with their own splash art that ties into their own lore. Some of them are interconnected in some way while others include interesting details. The characters also have cosmetics called "Skins". These skins allow players to look cool in-game (the rift) and offer lots of unique effects. Within skinlines, there are also lores of their own, thus making it a game perfect for lore fanatics like me. The game comes with many gamemodes like Norms (normal), Ranked, Flex (Ranked with 5 players of the same party), ARAM (All Mid All Random), and TFT (Teamfight Tactics).</p>
-   </section>
-  <hr>
-  <!-- Other companies -->
-    <h1>Discover Other Games</h1>
-    <div class="row">
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_mojang/">
-    <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft" width="auto" height="300">
-    </a></p>
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_EA_sports/">
-    <img src="Electronic-Arts-Logo.svg.png" alt="EA Sports" width="auto" height="300">
-    </a></p>
-  </div>
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_hoyoverse_games/">
-    <img src="ef6ae97143bb4b4fb023ddd6341d5823.png" alt="Hoyoverse Games" width="auto" height="300">
-    </a></p>
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_infold/">
-    <img src="unnamed.png" alt="InFold Pte. Ltd." width="auto" height="300">
-    </a></p>
+      </div>
+      <div class="image-right">
+        <img src="1706273134valorant-icon-png.png" alt="Valorant">
+      </div>
     </div>
+    <div class="bottom-text">
+      <p>Reason: Valorant may be one of two games that I have a love-hate relationship with. Sometimes, my matches can go really well and I do amazing, other days I can go 0/10/2 (K/D/A). However, like many multiplayer games, I mainly play with my friens. They make those 10 loss streaks bareable and fun. Gameplay wise, Valorant is fun and unique with all its agents and their many abilities. With map glitches or lineups, a player has unlimited possibilities to win their match. There are many gamemodes that the game has to offer; if you get tired of normal gun shooting, you can switch to a rotating-weapons mode. Graphics wise, it's not bad, but there can be some improvements. Overall, Valorant isn't half bad when I'm winning with friends.</p>
+      </div>
   </div>
-    </main>
+  <hr>
+
+    <!-- League of Legends -->
+    <div class="layout-container">
+      <div class="top-section">
+        <div class="text-left">
+          <h3>︻⋆︻⋆︻⋆︻⋆︻</h3>
+          <h2>League of Legends</h2>
+          <h3>︼⋆︼⋆︼⋆︼⋆︼</h3>
+        <hr>
+        <p>Platform Played on: PC/Mobile (TFT)</p>
+        <p>Number of Months played: 12</p>
+        <p>Money spent: $0</p>
+        <p>Most Played Character: Ahri</p>
+        <p>Most Played Gamemode: Summoner's Rift: Normal</p>
+        <p>Rating: 7/10</p>
+        </div>
+        <div class="image-right">
+          <img src="600px-League_of_Legends_Icon.png" alt="League of Legends">
+        </div>
+      </div>
+      <div class="bottom-text">
+        <p>Reason: League is not any better than Valorant, but I have significantly more play time on it due to my laptop's inability to run Valorant. Filled with toxic players, I often find myself being annoyed at their players and have to take breaks from playing the game. That's why I try to play with my friends rather than strangers. Graphics wise, the in-game graphics are as good as they get with a MOBA game, but their splash art is really nice. Each character comes with their own splash art that ties into their own lore. Some of them are interconnected in some way while others include interesting details. The characters also have cosmetics called "Skins". These skins allow players to look cool in-game (the rift) and offer lots of unique effects. Within skinlines, there are also lores of their own, thus making it a game perfect for lore fanatics like me. The game comes with many gamemodes like Norms (normal), Ranked, Flex (Ranked with 5 players of the same party), ARAM (All Mid All Random), and TFT (Teamfight Tactics).</p>
+        </div>
+    </div>
+    <hr>
+
+  <!-- Other companies -->
+  <h1>Discover Other Games</h1>
+  <div class="icon-grid">
+    <a href="mojang.html" class="icon-card">
+      <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft">
+      <p>Mojang (Microsoft)</p>
+    </a>
+    <a href="sims.html" class="icon-card">
+      <img src="Electronic-Arts-Logo.svg.png" alt="EA Sports">
+      <p>EA Sports</p>
+    </a>
+    <a href="hoyoverse.html" class="icon-card">
+      <img src="ef6ae97143bb4b4fb023ddd6341d5823.png" alt="Hoyoverse Games">
+      <p>HoYoverse</p>
+    </a>
+    <a href="infold.html" class="icon-card">
+      <img src="unnamed.png" alt="InFold Pte. Ltd.">
+      <p>InFold Pte. Ltd.</p>
+    </a>
+  </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-  /* General styles for all pages */
+    /* General styles for all pages */
 body {
   font-family: Courier, monospace;
   margin: 0;
@@ -9,7 +9,7 @@ body {
   background-color: #c4d9b4;
   color: #133605;
 }
-  
+
 /* Header styles */
 header {
   display: flex;
@@ -18,7 +18,7 @@ header {
   background-color: #60854c;
   color: white;
 }
- 
+
 .logo {
   height: 50px;
 }
@@ -41,7 +41,7 @@ header {
   color: #ebf7d5;
 }
 
-  a:hover {
+.nav-bar a:hover {
     color: #304013;
   }
   
@@ -53,7 +53,9 @@ header {
 .games h1 {
   font-family: Lucida Console, monospace;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 50px
 }
   
 .games h2 {
@@ -61,87 +63,169 @@ header {
   text-align: center;
   margin-bottom: 30px;
 }
-
-.games h3 {
+  
+  .games h3 {
     font-family: Lucida Console, monospace;
     text-align: center;
-    margin-bottom: 30px;
   }
 
 /* Img settings */
 .game img {
   width: 100px;
   height: auto;
- 
+  margin-bottom: 30px
 }
   
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 40%;
 }
 
 .game p {
   margin: 100px;
 }
-  
+
 /*Discover more*/
-  .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+  gap: 20px; /* Space between grid items */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.column {
-  flex: 25%;
-  max-width: 50%;
-  padding: 0 4px;
+/* Individual icon card styling */
+.icon-card {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: center;
-  width: 75%;
+.icon-card img {
+  width: 200px; /* Icon size */
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.icon-card p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Hover effect for cards */
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Top banner */
-.container {
+#container {
+  background-color: #c4d9b4;
+  opacity: 0.7;
   position: relative;
   text-align: center;
-  border: 10px solid #cbf23c;
-  color: white;
 }
-  
-.container img {
-  opacity: 0.8;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
+
+#container img {
+  width: 100%;
+}
+
   
 .bg-text {
   color: white;
   font-weight: bold;
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%; 
   height: 20%;
   width: 80%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+#container h1 {
+  font-size: 75px;
+  border: 5px solid #133605;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #60854c;
+  padding: 20px 40px;
+}
   
-.bg-text h1 {
-  font-family: Lucida Console, monospace;
-  font-size: 40px;
-  background-color: rgba(0,0,0, 0.6);
-  border: 5px solid #cbf23c;
-  padding: 20px;
+/* Text boxes */
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section with text and image */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Left text column */
+.text-left {
+  flex: 1;
+}
+
+.text-left h2 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-left h3 {
+    font-size: 2em;
+    font-family: Lucida Console, monospace;
+    text-align: center;
+    margin-top: 10px;
   }
-  
+
+
+.text-left p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  margin-top: 30px;
+}
+
+/* Right image column */
+.image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-right img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom text styling */
+.bottom-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+}
   </style>
   
 <!-- Content -->
@@ -155,22 +239,21 @@ header {
 
   <!-- Logo that links back to the homepage -->
   <header>
-    <a href="https://dreamingofyuu.github.io/fan_yukie_a3/">
+    <a href="home.html">
       <img src="Y.png" alt="Gamiverse Logo" class="logo">
     </a>
     
     <!-- Navigation bar -->
     <nav>
       <ul class="nav-bar">
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3/">Home</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage/">Games</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_aboutme">About Me</a></li>
-      </ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        </ul>
     </nav>
   </header>
   
    <!-- Top banner -->
-    <div class="container">
+    <div id="container">
     <img src="2.jpg" alt="EA Sports Banner" style="width:100%;">
     <div class="bg-text"><h1>
       EA Sports</h1></div>
@@ -180,40 +263,49 @@ header {
   <main class="games">
   
     <!-- The Sims 4  -->
-    <section id="The Sims 4" class="games">
-      <h3>-ˋˏ ༻❁༺ ˎˊ-</h3>
-      <h2>The Sims 4</h2>
-      <h3>... ✿°•∘ɷ∘•°✿ ..</h3>
-      <img src="c66e591693fd6e7b26fc5a60efb68817.png" alt="The Sims 4" class="center">
-      <p>Platform Played on: PC</p>
-      <p>Number of Months played: 10</p>
-      <p>Money spent: $???</p>
-      <p>Most Played Character: N/A</p>
-      <p>Most Played Gamemode: N/A</p>
-      <p>Rating: 8.5/10</p>
-      <p>Reason: I only play The Sims when I have time to. This includes time that I don't have academic work or when none of my friends are online to play. I don't remember how much I've spent on expansion packs and dlcs for this game, but it's been quite a few. I first got this game for my love of interior design. When I got this game, I was so sure that I was going to go to Ryerson for Interior Design, but I ended up going elsewhere. Nonetheless, it's always fun to customize my OCs from books I write into The Sims. I am able to build and better visualize how my imaginary world and characters would look. As for the amount I spent on this game... as much as I'd like to disclose that information, for my personal santity, I wish to not. To put it in perspective, Sims isn't very fun unless there are copious amounts of CC (custom content) or DLCs. Most CC are free to download from the internet, but the DLCs come directly from the game. Albeit I have gotten some 'stuff packs' for free, I still have a couple expansion packs to play with my game.</p>
-   </section>
- <hr>
+    <div class="layout-container">
+      <div class="top-section">
+        <div class="text-left">
+        <h3>-ˋˏ ༻❁༺ ˎˊ-</h3>
+        <h2>The Sims 4</h2>
+        <h3>... ✿°•∘ɷ∘•°✿ ..</h3>
+        <hr>
+        <p>Platform Played on: PC</p>
+        <p>Number of Months played: 10</p>
+        <p>Money spent: $???</p>
+        <p>Most Played Character: N/A</p>
+        <p>Most Played Gamemode: N/A</p>
+        <p>Rating: 8.5/10</p>
+        </div>
+        <div class="image-right">
+          <img src="Minecraft_Bedrock_icon.png" alt="Minecarft">
+        </div>
+      </div>
+      <div class="bottom-text">
+        <p>Reason: I only play The Sims when I have time to. This includes time that I don't have academic work or when none of my friends are online to play. I don't remember how much I've spent on expansion packs and dlcs for this game, but it's been quite a few. I first got this game for my love of interior design. When I got this game, I was so sure that I was going to go to Ryerson for Interior Design, but I ended up going elsewhere. Nonetheless, it's always fun to customize my OCs from books I write into The Sims. I am able to build and better visualize how my imaginary world and characters would look. As for the amount I spent on this game... as much as I'd like to disclose that information, for my personal santity, I wish to not. To put it in perspective, Sims isn't very fun unless there are copious amounts of CC (custom content) or DLCs. Most CC are free to download from the internet, but the DLCs come directly from the game. Albeit I have gotten some 'stuff packs' for free, I still have a couple expansion packs to play with my game.</p>
+        </div>
+    </div>
+    <hr>
+
   <!-- Other companies -->
   <h1>Discover Other Games</h1>
-    <div class="row">
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_hoyoverse_games/">
-    <img src="ef6ae97143bb4b4fb023ddd6341d5823.png" alt="Hoyoverse Games" width="auto" height="300">
-    </a></p>
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_infold/">
-    <img src="unnamed.png" alt="InFold Pte. Ltd." width="auto" height="300">
-    </a></p>
+  <div class="icon-grid">
+    <a href="hoyoverse.html" class="icon-card">
+      <img src="ef6ae97143bb4b4fb023ddd6341d5823.png" alt="Hoyoverse Games">
+      <p>HoYoverse</p>
+    </a>
+    <a href="infold.html" class="icon-card">
+      <img src="unnamed.png" alt="InFold Pte. Ltd.">
+      <p>InFold Pte. Ltd.</p>
+    </a>
+    <a href="riot.html" class="icon-card">
+      <img src="download.png" alt="Riot Games">
+      <p>Riot Games</p>
+    </a>
+    <a href="mojang.html" class="icon-card">
+      <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft">
+      <p>Mojang (Microsoft)</p>
+    </a>
   </div>
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_riot_games/">
-    <img src="download.png" alt="Riot Games" width="auto" height="300">
-    </a></p>
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_mojang/">
-    <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft" width="auto" height="300">
-    </a></p>
-    </div>
-  </div>
-   </main>
 </body>
 </html>

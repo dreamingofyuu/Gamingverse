@@ -53,8 +53,8 @@ header {
 .games h1 {
   font-family: Lucida Console, monospace;
   text-align: center;
-  margin-top: 300px;
-  margin-bottom: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 50px
 }
   
@@ -88,47 +88,64 @@ header {
 }
 
 /*Discover more*/
-  .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+  gap: 20px; /* Space between grid items */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.column {
-  flex: 25%;
-  max-width: 50%;
-  padding: 0 4px;
+/* Individual icon card styling */
+.icon-card {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: center;
-  width: 25%;
-  height: auto;
+.icon-card img {
+  width: 200px; /* Icon size */
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.icon-card p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Hover effect for cards */
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Top banner */
-.container {
+#container {
+  background-color: #7591d3;
+  opacity: 0.7;
   position: relative;
   text-align: center;
-  border: 10px solid #342166;
-  color: white;
 }
-  
-.container img {
-  opacity: 0.8;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
+
+#container img {
+  width: 100%;
+}
+
   
 .bg-text {
   color: white;
   font-weight: bold;
   position: absolute;
-  top: 25%;
+  top: 45%;
   left: 50%; 
   height: 20%;
   width: 80%;
@@ -136,20 +153,89 @@ header {
   text-align: center;
 }
   
-.bg-text h1 {
-  font-family: Lucida Console, monospace;
-  font-size: 40px;
-  background-color: rgba(0,0,0, 0.6);
-  border: 5px solid #f1f1f1;
-  padding: 20px;
-  }
+#container h1 {
+  font-size: 75px;
+  border: 5px solid #e96fb4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: #312f6f;
+  padding: 20px 40px;
+}
   
+/* Text boxes */
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top section with text and image */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Left text column */
+.text-left {
+  flex: 1;
+}
+
+.text-left h2 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-left h3 {
+    font-size: 2em;
+    font-family: Lucida Console, monospace;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+.text-left p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  margin-top: 30px;
+}
+
+/* Right image column */
+.image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-right img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom text styling */
+.bottom-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+}
   </style>
+
+
+
+
 <!-- Content -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoyoverse Games</title>
+  <title>HoYoverse Games</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -163,73 +249,91 @@ header {
     <!-- Navigation bar -->
     <nav>
        <ul class="nav-bar">
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3/">Home</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage/">Games</a></li>
-        <li><a href="https://dreamingofyuu.github.io/fan_yukie_a3_aboutme">About Me</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
       </ul>
     </nav>
   </header>
   
-  <!-- Hoyoverse Games -->
-  <main class="games">
-    
   <!-- Top banner -->
-    <div class="container">
-    <img src="Genshin-Impact-Lantern-Rite-Festival-event.avif" alt="Genshin Banner" style="width:100%;">
+    <div id="container">
+    <img src="Genshin-Impact-Lantern-Rite-Festival-event.jpg" alt="Genshin Banner" style=width:100%;>
     <div class="bg-text"><h1>
-      Hoyoverse Games</h1></div>
+      HoYoverse Games</h1></div>
   </div>
 
+<!-- Hoyoverse Games -->
+  <div class="games">
+
   <!-- Genshin Impact -->
-  <section id="Genshin Impact" class="games">
+  <div class="layout-container">
+    <div class="top-section">
+      <div class="text-left">
       <h3>.·:*¨༺ 𓆩⟡𓆪 ༻¨*:·.</h3>
       <h2>Genshin Impact</h2>
       <h3>°°••..●∘◦❀◦∘●..••°°</h3>
-      <img src="Genshin_Impact.webp" alt="Genshin Impact" class="center">
-      <p>Platform Played on: PC/Mobile</p>
-      <p>Number of Months played: 6</p>
-      <p>Money spent: $0</p>
-      <p>Favourite Character: Xiao</p>
-      <p>Favourite Event: Lantern Rite</p>
-      <p>Personal Rating: 9.5/10</p>
+      <hr>
+        <p>Platform Played on: PC/Mobile</p>
+        <p>Number of Months played: 6</p>
+        <p>Money spent: $0</p>
+        <p>Favourite Character: Xiao</p>
+        <p>Favourite Event: Lantern Rite</p>
+        <p>Personal Rating: 9.5/10</p>
+        </div>
+      <div class="image-right">
+        <img src="Genshin_Impact.webp" alt="Genshin Impact">
+      </div>
+    </div>
+    <div class="bottom-text">
       <p>Reason: I've been playing Genshin since the release and I've had my fair share of ups and downs. There have been times in which I've stopped playing for months on end. I was first attracted to this game by its beautiful graphics despite it being free to download and play. The storylines, animations, character development, and gameyplay is what allows me to give Genshin such a high rating. This game was my comfort game throughout the years in which COVID had locked me in my room. However much I love the game, I took 0.5 off my rating due to its tedious committment system. As a free-to-play player, I cannot afford to spend copious amounts of money to abtain the characters I want. Thus I need to grind out the game and work for the in-game currency. With academics taking much of my time, I simply could not commit to the game anymore. Nonetheless, I will occasionally get back on the game just to see my favourite characters and participate in some limited time events when I get the chance.</p>
-    </section>
-    <hr>
+      </div>
+  </div>
+  <hr>
+
     <!-- Honkai Star Rail -->
-    <section id="Honkai Star Rail" class="games">
-      <h3>.·:*¨༺ 𓆩⟡𓆪 ༻¨*:·.</h3>
+    <div class="layout-container">
+    <div class="top-section">
+      <div class="text-left">
+        <h3>.·:*¨༺ 𓆩⟡𓆪 ༻¨*:·.</h3>
       <h2>Honkai Star Rail</h2>
       <h3>°°••..∘°∘♡∘°∘..••°°</h3>
-      <img src="e52da5a31de788599378924f0e639557.png" alt="Honkai Star Rail" class="center">
+      <hr>
       <p>Platform Played on: PC/Mobile</p>
       <p>Number of Months played: 5</p>
       <p>Money spent: $0</p>
       <p>Favourite Chartacter: Dan Heng</p>
       <p>Favourite Event: ???</p>
       <p>Personal Rating: 8/10</p>
+      </div>
+      <div class="image-right">
+        <img src="e52da5a31de788599378924f0e639557.png" alt="Honkai Star Rail">
+      </div>
+    </div>
+    <div class="bottom-text">
       <p>Reason: Coming from the same company of Genshin Impact, I also played Honkai since the beginning of its era. However, I found this game less appealing to Genshin and quickly dropped it. I occasionally got on to play when I could, but the gameplay just felt lacking compared to Genshin. Perhaps it was due to how much content others had already completed compare to me, but I felt like I would be unable to catch up to the rapidly progressing storyline. The design and gameplay was what brought it to such a high rating, but for me, I just couldn't keep up with the game.</p>
-    </section>
-    <hr>
-  <!-- Other companies -->
-    <h1>Discover Other Games</h1>
-    <div class="row">
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_infold/">
-    <img src="unnamed.png" alt="InFold Pte. Ltd." width="auto" height="300">
-    </a></p>
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_riot_games/">
-    <img src="download.png" alt="Riot Games" width="auto" height="300">
-    </a></p>
-  </div>
-  <div class="column">
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_mojang/">
-    <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft" width="auto" height="300">
-    </a></p>
-    <p><a href="https://dreamingofyuu.github.io/fan_yukie_a3_gamespage_EA_sports/">
-    <img src="Electronic-Arts-Logo.svg.png" alt="EA Sports" width="auto" height="300">
-    </a></p>
     </div>
   </div>
-  </main>
+  <hr>
+
+  <!-- Other companies -->
+    <h1>Discover Other Games</h1>
+    <div class="icon-grid">
+      <a href="infold.html" class="icon-card">
+        <img src="unnamed.png" alt="InFold Pte. Ltd.">
+        <p>InFold Pte. Ltd.</p>
+      </a>
+      <a href="riot.html" class="icon-card">
+        <img src="download.png" alt="Riot Games">
+        <p>Riot Games</p>
+      </a>
+      <a href="mojang.html" class="icon-card">
+        <img src="mojang-logo-988A631D5C-seeklogo.com.png" alt="Mojang/Microsoft">
+        <p>Mojang (Microsoft)</p>
+      </a>
+      <a href="sims.html" class="icon-card">
+        <img src="Electronic-Arts-Logo.svg.png" alt="EA Sports">
+        <p>EA Sports</p>
+      </a>
+    </div>
 </body>
 </html>
